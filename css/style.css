@@ -1,0 +1,60 @@
+body {
+    height: 100vh;
+    overflow: hidden;
+    background: rgb(0,150,136);
+    background: linear-gradient(180deg, rgba(0,150,136,1) 15%, rgba(218,219,212,1) 15%);
+}
+
+.box {
+    overflow: auto;
+    background-color: blue;
+    height: 800px;
+}
+
+.sidebar {
+    background-color: #EAEAEA;
+    flex-basis: 35%;
+    margin-right: 1px;
+}
+
+.user-ui {
+    background-color: #EAEAEA;
+    height: 70px;
+}
+
+.notifications {
+    background-color: #8EDAFC;
+}
+
+img {
+    max-height: 60px;
+}
+
+i {
+    cursor: pointer;
+    color: #B1B1B1;
+}
+
+.fa-bell-slash {
+    color: #8EDAFC;
+    background-color: #F2FBFF;
+}
+
+.user-name {
+    font-weight: 600;
+}
+
+.main-content{
+}
+
+header {
+    background-color: #EAEAEA;
+    height: 70px;
+    width: 100vh;
+}
+
+main {
+    overflow: auto;
+    flex-shrink: 0;
+}
+
