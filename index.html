@@ -23,60 +23,71 @@
     <script defer src="js/script.js"></script>
 </head>
 <body>
-    <div id="root">
+    <div id="root" class="h-100 d-flex align-items-center justify-content-center">
         <div class="container">
-            <div class="box mt-4 d-flex">
-                <div class="sidebar">
-                    <div class="user-ui d-flex justify-content-between mx-3">
-                        <ul class="d-flex list-unstyled align-items-center mb-0">
-                            <li><img src="img/avatar_1.jpg" class="rounded-circle" alt=""></li>
-                            <li><p class="mb-0 ms-2 user-name">Nome Utente</p></li>
-                        </ul>
-                        <ul class="d-flex list-unstyled align-items-center fs-4 mb-0">
-                            <li><i class="fa-solid fa-circle-notch m-2"></i></li>
-                            <li><i class="fa-solid fa-message m-2"></i></li>
-                            <li><i class="fa-solid fa-ellipsis-vertical m-2"></i></li>
-                        </ul>
+            <div class="row h-100">
+
+                <!-- SEZIONE DELLA SIDEBAR -->
+                <div class="sidebar col-4 p-0 h-100 d-flex flex-column">      
+                    <div id="user-ui" class="flex-shrink-0 d-flex justify-content-between">
+                        <div class="d-flex h-100 align-items-center p-1 mb-0">
+                            <img src="img/avatar_io.jpg" class="rounded-circle ms-1" alt="">
+                            <h6 class="mb-0 ms-2">Nome Utente</h6>
+                        </div>
+                        <div class="d-flex justify-content-around align-items-center me-3">
+                            <i class="fa-solid fa-circle-notch mx-2" role="button"></i>
+                            <i class="fa-solid fa-comment-alt mx-2" role="button"></i>
+                            <i class="fa-solid fa-ellipsis-v mx-2" role="button"></i>
+                        </div>
                     </div>
-                    <div class="notifications">
-                        <ul class="d-flex list-unstyled align-items-center fs-6 mb-0">
-                            <li><i class="fa-solid fa-bell-slash m-3 p-3 fs-5 rounded-circle"></i></li>
-                            <li>
-                                <h6 class="mb-0">Ricevi le notifiche di nuovi messaggi</h6>
-                                <p class="mb-0"><a href="#" class="link-underline-secondary text-secondary fs-6">Attiva notifiche desktop</a></p>
-                            </li> 
-                        </ul>
+
+                    <!-- SEZIONE DELLE NOTIFICHE -->
+                    <div id="notifications" class="flex-shrink-0">
+                        <div class="d-flex h-100 align-items-center p-1 mb-0">
+                            <i class="fa-solid fa-bell-slash d-flex align-items-center justify-content-center flex-shrink-0 ms-2"></i>
+                            <div class="d-flex flex-column">
+                                <h6 class="mb-0 ms-2">Ricevi notifiche di nuovi messaggi</h6>
+                                <p class="mb-0 ms-2 text-secondary text-decoration-underline p-notifications" role="button">Attiva notifiche desktop</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="search-bar">
+
+                    <!-- SEZIONE DELLA BARRA DI RICERCA -->
+                    <div id="search-bar">
                         <nav class="navbar bg-body-tertiary">
                             <form class="container-fluid">
                               <div class="input-group">
-                                <span class="input-group-text bg-white" id="basic-addon1"><i class="fa-solid fa-magnifying-glass mx-2"></i></span>
-                                <input type="text" class="form-control bg-white border-start-0 px-0 " placeholder="Cerca o inizia una nuova chat">
+                                <span class="input-group-text bg-white" id="basic-addon1"><i class="fa-solid fa-magnifying-glass ms-2"></i></span>
+                                <input type="text" class="form-control border-start-0" placeholder="Cerca o inizia una nuova chat">
                               </div>
                             </form>
                         </nav>
                     </div>
-                    <div class="user-list"></div>
-                </div>
-                <div class="main-content">
-                    <header class="d-flex justify-content-between">
-                        <ul class="d-flex list-unstyled align-items-center mb-0">
-                            <li><img src="img/avatar_1.jpg" class="rounded-circle ms-3" alt=""></li>
-                            <li><p class="mb-0 ms-2 user-name">Nome Utente</p></li>
-                        </ul>
-                        <ul class="d-flex list-unstyled align-items-center fs-4 mb-0 me-3">
-                            <li><i class="fa-solid fa-magnifying-glass m-2"></i></li>
-                            <li><i class="fa-solid fa-paperclip m-2"></i></li>
-                            <li><i class="fa-solid fa-ellipsis-vertical m-2"></i></li>
-                        </ul>
-                    </header>
-                    <main>
-                        <p></p>
-                    </main>
-                    <footer>
 
-                    </footer>
+                    <!-- SEZIONE DELLA LISTA CONTATTI -->
+                    <div id="contacts-list" class="flex-grow-1 bg-white overflow-auto">
+                        <ul class="m-0 p-1">
+                            <li class="d-flex h-100 align-items-center p-2 mb-0 border-bottom border-light" role="button">
+                                <img src="img/avatar_2.jpg" class="rounded-circle ms-1" alt="user">
+                                <h6 class="mb-0 ms-2">Dario</h6>
+                            </li>
+                            <li class="d-flex h-100 align-items-center p-2 mb-0 border-bottom border-light" role="button">
+                                <img src="img/avatar_6.jpg" class="rounded-circle ms-1" alt="user">
+                                <h6 class="mb-0 ms-2">Miriana</h6>
+                            </li>
+                            <li class="d-flex h-100 align-items-center p-2 mb-0 border-bottom border-light" role="button">
+                                <img src="img/avatar_8.jpg" class="rounded-circle ms-1" alt="user">
+                                <h6 class="mb-0 ms-2">Roberto</h6>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- SEZIONE DELLA CHAT -->
+                <div id="chat" class="main-content col-8 p-0 h-100 d-flex flex-column">
+                    <header class="flex-shrink-0"> Header </header>
+                    <main class="flex-grow-1 overflow-auto"> Messaggi</main>
+                    <footer class="flex-shrink-0"> Footer </footer>
                 </div>
             </div>
         </div>
