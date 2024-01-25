@@ -66,7 +66,7 @@
 
                     <!-- SEZIONE DELLA LISTA CONTATTI -->
                     <div id="contacts-list" class="flex-grow-1 bg-white overflow-auto">
-                        <ul class="m-0 p-1">
+                        <ul class="m-0 px-0 py-1">
                             <li class="d-flex h-100 align-items-center p-2 mb-0 border-bottom border-light" role="button">
                                 <img src="img/avatar_2.jpg" class="rounded-circle ms-1" alt="user">
                                 <h6 class="mb-0 ms-2">Dario</h6>
@@ -85,9 +85,38 @@
 
                 <!-- SEZIONE DELLA CHAT -->
                 <div id="chat" class="main-content col-8 p-0 h-100 d-flex flex-column">
-                    <header class="flex-shrink-0"> Header </header>
-                    <main class="flex-grow-1 overflow-auto"> Messaggi</main>
-                    <footer class="flex-shrink-0"> Footer </footer>
+                    <header class="flex-shrink-0">  
+                        <div id="user-ui" class="flex-shrink-0 d-flex justify-content-between">
+                            <div class="d-flex h-100 align-items-center p-1 mb-0">
+                                <img src="img/avatar_io.jpg" class="rounded-circle mx-2" alt="">
+                                <div class="d-flex flex-column">
+                                    <h6 class="mb-0 ms-2">Michele</h6>
+                                    <p class="mb-0 ms-2 text-secondary p-notifications">Ultimo Accesso oggi alle</p>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-around align-items-center mx-3">
+                                <i class="fa-solid fa-magnifying-glass mx-2" role="button"></i>
+                                <i class="fa-solid fa-paperclip mx-2" role="button"></i>
+                                <i class="fa-solid fa-ellipsis-v mx-2" role="button"></i>
+                            </div>
+                        </div>
+                    </header>
+                    <main class="flex-grow-1 overflow-auto">
+
+                    </main>
+                    <footer class="flex-shrink-0">
+                        <div class="row h-100 align-items-center m-0">
+                            <div class="col-1 d-flex justify-content-center">
+                                <i class="fa-regular fa-smile fa-2x" role="button"></i>
+                            </div>
+                            <div class="col-10 px-0">
+                                <input type="text" class="form-control" placeholder="Scrivi un messaggio">
+                            </div>
+                            <div class="col-1 d-flex justify-content-center">
+                                <i class="fa-solid fa-microphone fa-2x" role="button"></i>
+                            </div>
+                        </div>
+                    </footer>
                 </div>
             </div>
         </div>
