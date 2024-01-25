@@ -61,3 +61,26 @@ main {
 .p-notifications {
     font-size: 14px;
 }
+
+.chat-container.sent {
+    justify-content: flex-end;
+}
+
+.chat-container.received {
+    justify-content: flex-start;
+}
+
+.chat-container.sent .message {
+    background-color: #D5F9BA;
+}
+
+.chat-container.received .message {
+    background-color: #fff;
+}
+
+.chat-container .message time {
+    display: block;
+    text-align: right;
+    font-size: 11px;
+    color: gray;
+}
