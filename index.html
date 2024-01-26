@@ -113,7 +113,7 @@
                                 <i class="fa-regular fa-smile fa-2x" role="button"></i>
                             </div>
                             <div class="col-10 px-0">
-                                <input type="text" class="form-control" placeholder="Scrivi un messaggio">
+                                <input type="text" class="form-control" placeholder="Scrivi un messaggio" v-model="Message" @keyup.enter="sendMessage">
                             </div>
                             <div class="col-1 d-flex justify-content-center">
                                 <i class="fa-solid fa-microphone fa-2x" role="button"></i>
