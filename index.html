@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ciao</title>
+    <title>Boolzapp</title>
 
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -60,7 +60,7 @@
                             <form class="container-fluid">
                                 <div class="input-group">
                                     <span class="input-group-text bg-white" id="basic-addon1"><i class="fa-solid fa-magnifying-glass ms-2"></i></span>
-                                    <input type="text" class="form-control border-start-0" placeholder="Cerca o inizia una nuova chat">
+                                    <input type="text" class="form-control border-start-0" placeholder="Cerca o inizia una nuova chat" v-model="searchText">
                                 </div>
                             </form>
                         </nav>
@@ -69,7 +69,7 @@
                     <!-- SEZIONE DELLA LISTA CONTATTI -->
                     <div id="contacts-list" class="flex-grow-1 bg-white overflow-auto">
                         <ul class="m-0 px-0 py-1">
-                            <li v-for="contact in contacts" :key="contact.id" @click="setCurrentId(contact.id)" class="d-flex h-100 align-items-center p-2 mb-0 border-bottom border-light" role="button">
+                            <li v-for="contact in filteredContact" :key="contact.id" @click="setCurrentId(contact.id)" class="d-flex h-100 align-items-center p-2 mb-0 border-bottom border-light" role="button">
                                 <img :src="`img/avatar${contact.avatar}.jpg`" class="rounded-circle ms-1" :alt="contact.name">
                                 <h6 class="mb-0 ms-2">{{contact.name}}</h6>
                             </li>

@@ -6,8 +6,9 @@
                 user,
                 contacts,
                 currentId: 1,
-                Message: ''
-            };
+                Message: '',
+                searchText: ''
+            }
         },
         computed: {
             currentContact() {
@@ -15,6 +16,10 @@
             },
             currentChat() {
                 return this.currentContact.messages;
+            },
+            filteredContact() {
+                const searchTerm = this.searchText.toLowerCase();
+                return this.contacts.filter(contact => contact.name.toLowerCase().includes(searchTerm))
             }
         },
         methods: {
