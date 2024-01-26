@@ -3,34 +3,7 @@ body {
     background: linear-gradient(rgba(0,150,136,1) 15%, rgba(218,219,212,1) 15%);
 }
 
-#root .container {
-    background-color: #fff;
-    height: 90%;
-}
-
-#chat {
-    background-color: #E5DED5;
-}
-
-.side-bar {
- background-color: #fff;
-}
-
-#user-ui {
-    background-color: #EAEAEA;
-    height: 70px;
-} 
-
-#notifications {
-    background-color: #8EDAFC;
-    height: 80px;
-}
-
-#search-bar {
-    background-color: #FAFAFA;
-    height: 50px;
-}
-
+/*# UTILS */
 img {
     height: 50px;
     max-width: 100%;
@@ -48,14 +21,51 @@ i {
     background-color: #F2FBFF;
 } 
 
-header,
-footer {
+/* CONTAINER */
+#root .container {
+    background-color: #fff;
+    height: 90%;
+}
+
+/* SEZIONE DELLA SIDEBAR */
+
+#sidebar {
+    background-color: #fff;
+}
+
+/* SEZIONE DELLE NOTIFICHE */
+
+#notifications {
+    background-color: #8EDAFC;
+    height: 80px;
+}
+
+/* SEZIONE DELLA BARRA DI RICERCA */
+
+#search-bar {
+    background-color: #FAFAFA;
+    height: 50px;
+}
+
+/* SEZIONE DELLA CHAT */
+
+#chat {
+    background-color: #E5DED5;
+}
+
+#user-ui {
     background-color: #EAEAEA;
     height: 70px;
 }
 
 main {
     background-image: url('/img/mine.jpg');
+}
+
+header,
+footer {
+    background-color: #EAEAEA;
+    height: 70px;
 }
 
 .p-notifications {

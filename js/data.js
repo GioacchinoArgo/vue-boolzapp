@@ -187,6 +187,6 @@ const data = {
       ],
     }
   ]
-
 }
 
+const { user, contacts} = data;
