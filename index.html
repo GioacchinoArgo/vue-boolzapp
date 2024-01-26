@@ -24,7 +24,7 @@
 </head>
 <body>
 
-    <!-- cOCONTAINER -->
+    <!-- CONTAINER -->
     <div id="root" class="h-100 d-flex align-items-center justify-content-center">
         <div class="container">
             <div class="row h-100">
@@ -58,10 +58,10 @@
                     <div id="search-bar">
                         <nav class="navbar bg-body-tertiary">
                             <form class="container-fluid">
-                              <div class="input-group">
-                                <span class="input-group-text bg-white" id="basic-addon1"><i class="fa-solid fa-magnifying-glass ms-2"></i></span>
-                                <input type="text" class="form-control border-start-0" placeholder="Cerca o inizia una nuova chat">
-                              </div>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-white" id="basic-addon1"><i class="fa-solid fa-magnifying-glass ms-2"></i></span>
+                                    <input type="text" class="form-control border-start-0" placeholder="Cerca o inizia una nuova chat">
+                                </div>
                             </form>
                         </nav>
                     </div>
@@ -69,9 +69,9 @@
                     <!-- SEZIONE DELLA LISTA CONTATTI -->
                     <div id="contacts-list" class="flex-grow-1 bg-white overflow-auto">
                         <ul class="m-0 px-0 py-1">
-                            <li v-for="c in contacts" :key="c.id" class="d-flex h-100 align-items-center p-2 mb-0 border-bottom border-light" role="button">
-                                <img :src="`img/avatar${c.avatar}.jpg`" class="rounded-circle ms-1" :alt="c.name">
-                                <h6 class="mb-0 ms-2">{{c.name}}</h6>
+                            <li v-for="contact in contacts" :key="contact.id" @click="setCurrentId(contact.id)" class="d-flex h-100 align-items-center p-2 mb-0 border-bottom border-light" role="button">
+                                <img :src="`img/avatar${contact.avatar}.jpg`" class="rounded-circle ms-1" :alt="contact.name">
+                                <h6 class="mb-0 ms-2">{{contact.name}}</h6>
                             </li>
                         </ul>
                     </div>
@@ -82,9 +82,9 @@
                     <header class="flex-shrink-0">  
                         <div id="user-ui" class="flex-shrink-0 d-flex justify-content-between">
                             <div class="d-flex h-100 align-items-center p-1 mb-0">
-                                <img :src="`img/avatar(currentContact).jpg`" class="rounded-circle mx-2" alt="">
+                                <img :src="`img/avatar${currentContact.avatar}.jpg`" class="rounded-circle mx-2">
                                 <div class="d-flex flex-column">
-                                    <h6 class="mb-0 ms-2"></h6>
+                                    <h6 class="mb-0 ms-2">{{currentContact.name}}</h6>
                                     <p class="mb-0 ms-2 text-secondary p-notifications">Ultimo Accesso oggi alle</p>
                                 </div>
                             </div>
@@ -99,22 +99,10 @@
                     <!--* MESSAGGI -->
                     <main class="flex-grow-1 overflow-auto">
                         <ul class="px-2 py-4">
-                            <li class="d-flex p-3 chat-container sent">
+                            <li v-for="message in currentChat" :class="message.status" class="d-flex p-3 chat-container sent">
                                 <div class="message p-2 rounded-3">
-                                    <p class="mb-0">Hai portato a spasso il cane?</p>
-                                    <time datetime="2024-01-25 12:43">25/01/2024 - 12:43</time>
-                                </div>
-                            </li>
-                            <li class="d-flex p-3 chat-container sent">
-                                <div class="message p-2 rounded-3">
-                                    <p class="mb-0">Ricordati di dargli da mangiare</p>
-                                    <time datetime="2024-01-25 12:45">25/01/2024 - 12:45</time>
-                                </div>
-                            </li>
-                            <li class="d-flex p-3 chat-container received">
-                                <div class="message p-2 rounded-3">
-                                    <p class="mb-0">Tutto fatto!</p>
-                                    <time datetime="2024-01-25 12:46">25/01/2024 - 12:46</time>
+                                    <p class="mb-0">{{message.text}}</p>
+                                    <time :datetime="message.date">{{message.date}}</time>
                                 </div>
                             </li>
                         </ul>
